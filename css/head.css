@@ -1,0 +1,37 @@
+header {
+    background-color: #bbbbbb;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.head__imagen{
+    transition: all 1s;
+}
+.head__imagen{
+    transform: rotate(360deg);
+}
+.head__links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.opcion__link {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 1s;
+
+}
+
+.opcion__link:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}

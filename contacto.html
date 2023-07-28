@@ -1,129 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contactos - Barberia Alura</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="caja">
-        <h1><img src="img/imagenes/logo.png" alt="lodo de la barberia" /></h1>
-        <nav>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="producto.html">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactos - Barberia Alura</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/head.css">
+  <link rel="stylesheet" href="css/contacto/form.css" />
+  <link rel="stylesheet" href="css/contacto/informativo.css">
+  <link rel="stylesheet" href="css/contacto/tabla.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="head">
+      <img class="head__imagen" src="img/imagenes/logo.png" alt="lodo de la barberia" />
+      <div class="head__links">
+        <a class="opcion__link" href="index.html">Home</a>
+        <a class="opcion__link" href="producto.html">Productos</a>
+        <a class="opcion__link" href="contacto.html">Contacto</a>
       </div>
-    </header>
-    <main>
-      <form>
-        <label for="nombreApellido">Nombre y Apellido </label>
-        <input type="text" id="nombreApellido" class="input-padron" required />
+    </div>
+  </header>
+  <main>
+    <form class="form__contenedor">
+      <div class="input-container">
+        <label class="form__label" for="nombreApellido">Nombre y Apellido </label>
+        <input type="text" id="nombreApellido" class="form__input" placeholder="Name" data-tipo="nombre" required />
+        <span class="input-message-error">Este campo no es valido</span>
+      </div>
+      <div class="input-container">
+        <label class="form__label" for="correoElectronico"> Correo Electronico</label>
+        <input type="email" id="correoElectronico" class="form__input" placeholder="email" required data-tipo="email" />
+        <span class="input-message-error">Este campo no es valido</span>
+      </div>
+      <div class="input-container">
+        <label class="form__label" for="telefono">Telefono</label>
+        <input type="number" id="telefono" class="form__input" required placeholder="(xx) xxxx xxxx"
+          data-tipo="telefono" />
+        <span class="input-message-error">Este campo no es valido</span>
+      </div>
+      <div class="input-container">
+        <label class="form__label" for="mensaje">Mensaje</label>
+        <textarea id="mensaje" cols="70" rows="10" class="form__input tarea" required data-tipo="mensaje"></textarea>
+        <span class="input-message-error">Este campo no es valido</span>
+      </div>
 
-        <label for="correoElectronico"> Correo Electronico</label>
-        <input
-          type="email"
-          id="correoElectronico"
-          class="input-padron"
-          required
-          placeholder="emali@dominio.com"
-        />
+      <fieldset class="informacion">
+        <legend class="text_informativo">Como le gustaria que lo contactemos?</legend>
+        <label class="informacion__input" for="radioEmail"><input type="radio" name="contacto" value="email"
+            id="radioEmail" />Email</label>
+        <label class="informacion__input" for="radioTelefono"><input type="radio" name="contacto" value="telefono"
+            id="radioTelefono" />Telefono</label>
+        <label class="informacion__input" for="radioWhatsapp"><input type="radio" name="contacto" value="whatsapp"
+            id="radioWhatsapp" checked />Whatsapp</label>
+      </fieldset>
 
-        <label for="telefono">Telefono</label>
-        <input
-          type="tel"
-          id="telefono"
-          class="input-padron"
-          required
-          placeholder="(xx) xxxx xxxx"
-        />
+      <fieldset class="horario">
+        <legend class="text_informativo">En que horario prefiere ser atendido?</legend>
+        <select class="horario__opciones" name="" id="">
+          <option value="">Mañana</option>
+          <option value="">Tarde</option>
+          <option value="">Noche</option>
+        </select>
+      </fieldset>
+      <div class="enviar">
+        <label class="checkbox text_informativo"><input type="checkbox" checked />Le gustaria recibir
+          novedades?</label>
+        <input type="submit" value="Enviar Formulario" class="btn_enviar" />
+      </div>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea
-          id="mensaje"
-          cols="70"
-          rows="10"
-          class="input-padron"
-          required
-        ></textarea>
-
-        <fieldset>
-          <legend>Como le gustaria que lo contactemos?</legend>
-
-          <label for="radioEmail"
-            ><input
-              type="radio"
-              name="contacto"
-              value="email"
-              id="radioEmail"
-            />Email</label
-          >
-          <label for="radioTelefono"
-            ><input
-              type="radio"
-              name="contacto"
-              value="telefono"
-              id="radioTelefono"
-            />Telefono</label
-          >
-          <label for="radioWhatsapp"
-            ><input
-              type="radio"
-              name="contacto"
-              value="whatsapp"
-              id="radioWhatsapp"
-              checked
-            />Whatsapp</label
-          >
-        </fieldset>
-
-        <fieldset>
-          <legend>En que horario prefiere ser atendido?</legend>
-          <select name="" id="">
-            <option value="">Mañana</option>
-            <option value="">Tarde</option>
-            <option value="">Noche</option>
-          </select>
-        </fieldset>
-        <label class="checkbox"
-          ><input type="checkbox" checked />Le gustaria recibir
-          novedades?</label
-        >
-        <input type="submit" value="Enviar Formulario" class="enviar" />
-      </form>
-
-      <table>
-        <thead>
+      <table class="tabla">
+        <thead class="tabla__contenedor">
           <tr>
-            <th>Dia</th>
-            <th>Horario</th>
+            <th class="tabla__columna">Dia</th>
+            <th class="tabla__columna">Horario</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Lunes</td>
-            <td>08h - 20h</td>
+            <td class="tabla__fila">Lunes</td>
+            <td class="tabla__fila">08h - 20h</td>
           </tr>
           <tr>
-            <td>Miercoles</td>
-            <td>08h - 20h</td>
+            <td class="tabla__fila">Miercoles</td>
+            <td class="tabla__fila">08h - 20h</td>
           </tr>
           <tr>
-            <td>Viernes</td>
-            <td>08h - 20h</td>
+            <td class="tabla__fila">Viernes</td>
+            <td class="tabla__fila">08h - 20h</td>
           </tr>
         </tbody>
       </table>
-    </main>
-    <footer>
-      <img src="img/imagenes/logo-blanco.png" alt="Logo de la barberia" />
-      <p class="copy">&copy Copyright Barberia Alura</p>
-    </footer>
-  </body>
+    </form>
+  </main>
+  <footer>
+    <img src="img/imagenes/logo-blanco.png" alt="Logo de la barberia" />
+    <p class="copy">&copy Copyright Barberia Alura</p>
+  </footer>
+  <script src="js/app.js" type="module"></script>
+</body>
+
 </html>

@@ -1,0 +1,21 @@
+.tabla{
+    margin: 0 20rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.tabla__contenedor{
+    background-color: #555555;
+    color: white;
+    font-weight: bold;
+}
+.tabla__columna{
+    border: .1rem solid #000000;
+    padding: 1rem 2.4rem;
+}
+
+.tabla__fila{
+    border: .1rem solid #000000;
+    padding: 1rem 1.5rem;
+}
